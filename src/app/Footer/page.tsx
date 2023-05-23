@@ -1,7 +1,5 @@
+import { Box } from '@chakra-ui/react'
+
 export default function Footer() {
-  return (
-    <div>
-      ここはフッターです
-    </div>
-  )
+  return <Box>ここはフッターです</Box>
 }
