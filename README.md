@@ -1,34 +1,66 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# kakeibo-app
+https://github.com/tomichans/kakeibo-app
 
-First, run the development server:
+## Overview（概要）
+収入・支出等を記入するWeb帳簿アプリケーション。
 
-```bash
-npm run dev
+## Demo（デモ）
+
+## Usage（使い方）
+- アプリケーションのダウンロード
+  >> git clone https://github.com/tomichans/kakeibo-app.git
+
+- 実行方法
+1. 開発サーバー実行
+  >> npm run dev
 # or
-yarn dev
+  >> yarn dev
 # or
-pnpm dev
-```
+  >> pnpm dev
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. 以下URLへ接続
+  >> http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Requirement（環境）
+環境構築方法は以下URLを参考。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Next.js最速セットアップ
+https://zenn.dev/a_da_chi/articles/181ea4ccc39580
 
-## Learn More
+## Note（注意事項）
+- 命名規則
+  - コンポーネント：パスカルケース
+　　　　　　　　　 ※index.tsxは小文字
+  - 変数名（tsx）：キャメルケース
+  - クラス名（css）：キャメルケース
+  - 関数名（tsx）：キャメルケース
 
-To learn more about Next.js, take a look at the following resources:
+  ※パスカルケース
+　 （例）var hogeData; // good
+　 　　　var hogedata; // bad
+ 　　　　var HogeData; // bad
+  ※キャメルケース
+ 　（例）var HogeData; // good
+　 　　　var hogedata; // bad
+　 　　　var hogeData; // bad
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - ブランチ名：
+　　　　　新規機能開発ブランチ → feature/developerName/index
+　　　　　バグ修正ブランチ → bug/developerName/index
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- インデント
+  - tsx；スペース4
+  - css；スペース4
 
-## Deploy on Vercel
+## Author（文書）
+- 要件定義書
+- 画面設計書
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## References（参考文献）
+- NextJs公式ドキュメント
+https://nextjs.org/docs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Vercel GitHub
+https://github.com/vercel/next.js/
