@@ -1,4 +1,12 @@
 'use client'
+import {
+  Button,
+  Flex,
+  Heading,
+  Input,
+  ListItem,
+  UnorderedList,
+} from '@chakra-ui/react'
 import { useState } from 'react'
 
 export default function Main() {
@@ -24,29 +32,31 @@ export default function Main() {
 
   return (
     <div>
-      <h1>家計簿アプリ</h1>
-      <div>
-        <input
+      <Heading fontSize="5xl">家計簿アプリ</Heading>
+      <Flex>
+        <Input
+          w="300"
           type="text"
           placeholder="カテゴリ"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         />
-        <input
+        <Input
+          w="300"
           type="number"
           placeholder="金額"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
-        <button onClick={addTransaction}>追加</button>
-      </div>
-      <ul>
+        <Button onClick={addTransaction}>追加</Button>
+      </Flex>
+      <UnorderedList>
         {transactions.map((transaction, index) => (
-          <li key={index}>
+          <ListItem key={index}>
             カテゴリ: {transaction.category} 金額: {transaction.amount}
-          </li>
+          </ListItem>
         ))}
-      </ul>
+      </UnorderedList>
     </div>
   )
 }
