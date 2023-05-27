@@ -1,3 +1,4 @@
+'use client'
 import Footer from './Footer/page'
 import Header from './Header/page'
 import './globals.css'
