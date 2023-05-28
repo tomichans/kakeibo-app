@@ -2,8 +2,7 @@ import Footer from './Footer/page'
 import Header from './Header/page'
 import './globals.css'
 import { Inter } from 'next/font/google'
-import { CacheProvider } from '@chakra-ui/next-js'
-import { ChakraProvider } from '@chakra-ui/react'
+import { Providers } from './providers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,12 +17,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <CacheProvider>
-      <ChakraProvider>
+    <html lang="en">
+      <body>
         <Header />
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
-      </ChakraProvider>
-    </CacheProvider>
+      </body>
+    </html>
   )
 }
