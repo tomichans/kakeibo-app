@@ -1,7 +1,11 @@
 'use client'
 
-import { Box } from '@chakra-ui/react'
+import style from '../Footer/Footer.module.css'
 
 export default function Footer() {
-  return <Box>ここはフッターです</Box>
+  return (
+    <div className={style.footer}>
+      Copyright © 2023 tomichans
+    </div>
+  )
 }
