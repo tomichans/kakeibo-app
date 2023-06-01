@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: space-between;
   position: 'relative';
+  height: 70px; /* 更新したら、page.module.css - .pageMainも変更する*/
 }
 
 .logo {

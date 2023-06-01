@@ -1,1 +1,4 @@
-
+.pageMain {
+    /* メインの高さ（100vh - ヘッダーの高さ */
+    height: calc(100vh - 70px);
+}
