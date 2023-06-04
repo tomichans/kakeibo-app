@@ -1,41 +1,29 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import style from './Header.module.css'
+'use client'
+import NextLink from 'next/link'
+import { Box, Flex, Heading, Link as ChakraUILink } from '@chakra-ui/react'
 
 export default function Header() {
   return (
-    <div className={style.container}>
-      <Image
-        className={style.logo}
-        src="/1.jpg"
-        alt="Logo"
-        width={80}
-        height={60}
-      />
-      <nav className={style.navigation}>
-        <ul className={style.menu}>
-          <li>
-            <Link href="#" className={style.menuLink}>
-              メニュー1
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className={style.menuLink}>
-              メニュー2
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className={style.menuLink}>
-              メニュー3
-            </Link>
-          </li>
-          <li>
-            <Link href="#" className={style.menuLink}>
-              メニュー4
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <Flex
+      align="center"
+      justify="space-between"
+      bgColor="black"
+      p={7}
+      color="white"
+    >
+      <Box as="a" href="#home" display="block" textDecoration="none" w="80vm">
+        <Heading as="h1" size="lg">
+          家計簿アプリ（仮）
+        </Heading>
+      </Box>
+      <Flex align="center" fontSize="xl" fontWeight="bold">
+        <NextLink href={'#'}>
+          <ChakraUILink mr={7}>Sign-in</ChakraUILink>
+        </NextLink>
+        <NextLink href={'#'}>
+          <ChakraUILink mr={7}>Sign-up</ChakraUILink>
+        </NextLink>
+      </Flex>
+    </Flex>
   )
 }
