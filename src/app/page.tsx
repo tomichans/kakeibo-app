@@ -1,9 +1,10 @@
-import Main from './Main/page'
+import AddNewSpending from './AddNewSpending/page'
+import classes from './page.module.css'
 
 export default function Home() {
   return (
-    <>
-      <Main />
-    </>
+    <div className={classes.main}>
+      <AddNewSpending />
+    </div>
   )
 }
