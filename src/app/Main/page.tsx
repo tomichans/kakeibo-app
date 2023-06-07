@@ -8,7 +8,6 @@ import {
   UnorderedList,
 } from '@chakra-ui/react'
 import { useState } from 'react'
-import commonStyle from '../page.module.css'
 
 export default function Main() {
   interface Transaction {
@@ -32,7 +31,7 @@ export default function Main() {
   }
 
   return (
-    <div className={commonStyle.pageMain}>
+    <div>
       <Heading fontSize="5xl">家計簿アプリ</Heading>
       <Flex>
         <Input

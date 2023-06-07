@@ -3,6 +3,7 @@ import Header from './Header/page'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import { Providers } from './providers'
+import commonStyle from './page.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body>
         <Providers>
           <Header />
-          {children}
+          <div className={commonStyle.pageMain}>
+            {children}
+          </div>
         </Providers>
         <Footer />
       </body>

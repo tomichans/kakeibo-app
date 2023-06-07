@@ -10,6 +10,7 @@ export default function Header() {
       bgColor="black"
       p={7}
       color="white"
+      h="70"
     >
       <Box as="a" href="#home" display="block" textDecoration="none" w="80vm">
         <Heading as="h1" size="lg">
