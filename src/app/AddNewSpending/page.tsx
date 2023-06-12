@@ -7,28 +7,21 @@ import {
   ListItem,
   UnorderedList,
 } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useAddSpending } from '../../../hooks/useAddSpending'
 
 export default function AddNewSpending() {
-  interface Transaction {
-    category: string
-    amount: string
-  }
-
-  const [transactions, setTransactions] = useState<Transaction[]>([])
-  const [category, setCategory] = useState('')
-  const [amount, setAmount] = useState('')
-
-  const addTransaction = () => {
-    const newTransaction = {
-      category: category,
-      amount: amount,
-    }
-
-    setTransactions([...transactions, newTransaction])
-    setCategory('')
-    setAmount('')
-  }
+  const {
+    transactions,
+    category,
+    item,
+    amount,
+    memo,
+    setCategory,
+    setItem,
+    setAmount,
+    setMemo,
+    addSpending,
+  } = useAddSpending()
 
   return (
     <>
@@ -48,8 +41,8 @@ export default function AddNewSpending() {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
-        <Button onClick={addTransaction}>追加</Button>
-      </Flex>
+        />
+        <Button onClick={addSpending}>追加</Button>
       <UnorderedList>
         {transactions.map((transaction, index) => (
           <ListItem key={index}>
