@@ -1,6 +1,0 @@
-.main {
-  /* メインの高さ（100vh - ヘッダーの高さ */
-  height: calc(100vh - 70px);
-  background-color: rgb(228, 228, 228);
-  padding: 32px;
-}

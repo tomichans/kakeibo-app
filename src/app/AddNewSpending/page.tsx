@@ -21,7 +21,7 @@ export default function AddNewSpending() {
   } = useAddSpending()
 
   return (
-    <Box p="6" height="50%" w="60%" bgColor="white">
+    <Box p="6" w="60%" bgColor="white">
       <Heading mb="8" fontSize="4xl">
         家計簿を入力
       </Heading>
