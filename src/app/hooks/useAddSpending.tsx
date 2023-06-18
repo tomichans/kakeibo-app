@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Transaction } from '../interfaces/interfaces'
+import { Transaction } from '../../../interfaces/interfaces'
 
 // 支出入力画面
 export const useAddSpending = () => {
@@ -8,25 +8,23 @@ export const useAddSpending = () => {
   const [item, setItem] = useState<string>('')
   const [amount, setAmount] = useState<number>(0)
   const [memo, setMemo] = useState<string>('')
-
   const addSpending = () => {
     if (!category || !amount) {
-      alert('登録できる明細データがありません。')
       return
-    }
+    } else {
+      const newTransaction: Transaction = {
+        item: item,
+        category: category,
+        amount: amount,
+        memo: memo,
+      }
 
-    const newTransaction: Transaction = {
-      item: item,
-      category: category,
-      amount: amount,
-      memo: memo,
+      setTransactions([...transactions, newTransaction])
+      setCategory('')
+      setItem('')
+      setAmount(0)
+      setMemo('')
     }
-
-    setTransactions([...transactions, newTransaction])
-    setCategory('')
-    setItem('')
-    setAmount(0)
-    setMemo('')
   }
 
   return {
