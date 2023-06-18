@@ -4,3 +4,7 @@ export interface Transaction {
   amount: number
   memo: string
 }
+
+export interface RecentInputListProps {
+  transactions: Transaction[]
+}
