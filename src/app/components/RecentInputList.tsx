@@ -1,7 +1,7 @@
 'use client'
 import { ListItem, UnorderedList } from '@chakra-ui/react'
-import { Transaction } from '../../../interfaces/interfaces'
-import { RecentInputListProps } from '../../../interfaces/interfaces'
+import { Transaction } from '../../interfaces/interfaces'
+import { RecentInputListProps } from '../../interfaces/interfaces'
 
 // 最近の入力
 export default function RecentInputList(props: RecentInputListProps) {

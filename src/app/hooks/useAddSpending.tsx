@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Transaction } from '../../../interfaces/interfaces'
+import { Transaction } from '../../interfaces/interfaces'
 
 // 支出入力画面
 export const useAddSpending = () => {
