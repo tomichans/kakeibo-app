@@ -8,8 +8,15 @@ export const useAddSpending = () => {
   const [item, setItem] = useState<string>('')
   const [amount, setAmount] = useState<number>(0)
   const [memo, setMemo] = useState<string>('')
+  // 支出追加フラグ
+  const [addSpendFlg, setAddSpendFlg] = useState<boolean>(false)
+  // 追加エラーフラグ
+  const [addErrFlg, setAddErrFlg] = useState<boolean>(false)
+
   const addSpending = () => {
     if (!category || !amount) {
+      setAddErrFlg(true)
+      setAddSpendFlg(false)
       return
     } else {
       const newTransaction: Transaction = {
@@ -24,6 +31,8 @@ export const useAddSpending = () => {
       setItem('')
       setAmount(0)
       setMemo('')
+      setAddSpendFlg(true)
+      setAddErrFlg(false)
     }
   }
 
@@ -33,6 +42,8 @@ export const useAddSpending = () => {
     item,
     amount,
     memo,
+    addSpendFlg,
+    addErrFlg,
     setCategory,
     setItem,
     setAmount,
