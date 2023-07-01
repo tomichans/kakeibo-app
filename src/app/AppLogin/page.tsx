@@ -29,7 +29,7 @@ const ILoginInfoDefault: ILoginInfo = {
 
 /** 登録ボタン */
 // TODO グローバルファイルに定義して流用できるようにする
-export const CustomRegBtn: FC<ButtonProps> = (props) => {
+const CustomRegBtn: FC<ButtonProps> = (props) => {
   return <Button
     w="100%"
     bgColor="#0563b4"
@@ -47,7 +47,7 @@ export const CustomRegBtn: FC<ButtonProps> = (props) => {
 
 /** テキストボックス */
 // TODO グローバルファイルに定義して流用できるようにする
-export const CustomInput: FC<InputProps> = (props) => {
+const CustomInput: FC<InputProps> = (props) => {
   return <Input
     border="1px solid grey"
     padding="20px"
@@ -59,7 +59,7 @@ export const CustomInput: FC<InputProps> = (props) => {
 
 /** ラベル */
 // TODO グローバルファイルに定義して流用できるようにする
-export const LocalCustomFormLabel: FC<FormLabelProps> = (props) => {
+const LocalCustomFormLabel: FC<FormLabelProps> = (props) => {
   return <FormLabel
     fontSize="15px"
     fontWeight="600"
