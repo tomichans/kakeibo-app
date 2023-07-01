@@ -10,8 +10,6 @@ https://github.com/tomichans/kakeibo-app
 
 ## Demo（デモ）
 
-<<<<<<< HEAD
-
 ## Usage（使い方）
 
 -   アプリケーションのダウンロード
@@ -80,71 +78,4 @@ https://zenn.dev/a_da_chi/articles/181ea4ccc39580
 
 -   Vercel GitHub
     https://github.com/vercel/next.js/
-    =======
 
-## Usage（使い方）
-
--   アプリケーションのダウンロード
-
-    > > git clone https://github.com/tomichans/kakeibo-app.git
-
--   実行方法
-
-1. 開発サーバー実行
-
-    > > npm run dev
-    > > or
-    > > yarn dev
-    > > or
-    > > pnpm dev
-
-1. 以下 URL へ接続
-    > > http://localhost:3000
-
-## Requirement（環境）
-
-環境構築方法は以下 URL を参考。
-
-Next.js 最速セットアップ
-https://zenn.dev/a_da_chi/articles/181ea4ccc39580
-
-## Note（注意事項）
-
--   命名規則
-
-    -   コンポーネント：パスカルケース
-        　　　　　　　　　 ※index.tsx は小文字
-    -   変数名（tsx）：キャメルケース
-    -   クラス名（css）：キャメルケース
-    -   関数名（tsx）：キャメルケース
-
-    ※パスカルケース
-    　 （例）var HogeData; // good
-    　 　　　 var hogedata; // bad
-    　　　　 var hogeData; // bad
-    ※キャメルケース
-    　（例）var hogeData; // good
-    　 　　　 var Hogedata; // bad
-    　 　　　 var hogeData; // bad
-
-    -   ブランチ名：
-        　　　　　新規機能開発ブランチ → feature/developerName/index
-        　　　　　バグ修正ブランチ → bug/developerName/index
-
--   インデント
-    -   tsx；スペース 4
-    -   css；スペース 4
-
-## Author（文書）
-
--   要件定義書
--   画面設計書
-
-## References（参考文献）
-
--   NextJs 公式ドキュメント
-    https://nextjs.org/docs
-
--   Vercel GitHub
-    https://github.com/vercel/next.js/
-    > > > > > > > b0e3f5c4c3622704d2c34c09ff4cc5e09d8cc9c4
