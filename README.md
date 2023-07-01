@@ -39,6 +39,9 @@ https://github.com/tomichans/kakeibo-app
 Next.js 最速セットアップ
 https://zenn.dev/a_da_chi/articles/181ea4ccc39580
 
+・VsCode拡張機能
+Prettier - Code formatter
+
 ## Note（注意事項）
 
 -   命名規則
@@ -73,9 +76,9 @@ https://zenn.dev/a_da_chi/articles/181ea4ccc39580
 
 ## References（参考文献）
 
+
 -   NextJs 公式ドキュメント
     https://nextjs.org/docs
 
 -   Vercel GitHub
     https://github.com/vercel/next.js/
-
