@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import { InputItems } from '../../interfaces/interfaces'
 
 // 支出入力画面
@@ -6,10 +6,10 @@ export const useAddSpending = () => {
     // カテゴリ・品目名・金額・メモのまとまり
     const [inputItems, setInputItems] = useState<InputItems[]>([])
 
+    // 日付
+    const [date, setDate] = useState<string>('')
     // カテゴリ
     const [category, setCategory] = useState<string>('')
-    // 品目名
-    const [item, setItem] = useState<string>('')
     // 金額
     const [amount, setAmount] = useState<number>(0)
     // メモ
@@ -25,14 +25,14 @@ export const useAddSpending = () => {
      */
     const addSpending = () => {
         // カテゴリもしくは金額の入力がない場合
-        if (!category || !amount) {
+        if (!date || !category || !amount) {
             setAddErrFlg(true)
             setAddSpendFlg(false)
             return
         }
 
         const newInputItems: InputItems = {
-            item,
+            date,
             category,
             amount,
             memo,
@@ -40,25 +40,30 @@ export const useAddSpending = () => {
 
         setInputItems([...inputItems, newInputItems])
         setCategory('')
-        setItem('')
+        setDate('')
         setAmount(0)
         setMemo('')
         setAddSpendFlg(true)
         setAddErrFlg(false)
     }
 
+    const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
+        setDate(e.target.value)
+    }
+
     return {
         inputItems,
         category,
-        item,
+        date,
         amount,
         memo,
         addSpendFlg,
         addErrFlg,
         setCategory,
-        setItem,
+        setDate,
         setAmount,
         setMemo,
         addSpending,
+        handleDateChange,
     }
 }

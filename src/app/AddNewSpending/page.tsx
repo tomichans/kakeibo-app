@@ -1,5 +1,14 @@
 'use client'
-import { Box, Button, Text, HStack, Heading, Input } from '@chakra-ui/react'
+import {
+    Box,
+    Button,
+    Text,
+    HStack,
+    Heading,
+    Input,
+    Flex,
+    Select,
+} from '@chakra-ui/react'
 import { useAddSpending } from '../hooks/useAddSpending'
 import RecentInputList from '../components/RecentInputList'
 
@@ -8,20 +17,29 @@ export default function AddNewSpending() {
     const {
         inputItems,
         category,
-        item,
+        date,
         amount,
         memo,
         addSpendFlg,
         addErrFlg,
         setCategory,
-        setItem,
         setAmount,
         setMemo,
         addSpending,
+        handleDateChange,
     } = useAddSpending()
 
+    /** カテゴリプルダウンリスト */
+    const selectCtgr = [
+        { value: '', label: '選択してください' },
+        { value: '食料品', label: '食料品' },
+        { value: '消耗品', label: '消耗品' },
+        { value: '通信', label: '通信' },
+    ]
+
     return (
-        <Box p="6" bg="#F5F5F5">
+        <Flex p="6" bg="#F5F5F5" justify="space-between">
+            {/* 支出入力欄 */}
             <Box p="6" w="60%" bgColor="white">
                 <Heading mb="8" fontSize="4xl">
                     家計簿を入力
@@ -57,7 +75,7 @@ export default function AddNewSpending() {
                 <Box my="5">
                     <HStack>
                         <Text px="4" w="20%" fontSize="2xl">
-                            品目名
+                            日付
                         </Text>
                         <Text px="4" w="20%" fontSize="2xl">
                             カテゴリ
@@ -72,18 +90,22 @@ export default function AddNewSpending() {
                     <HStack>
                         <Input
                             w="20%"
-                            type="text"
-                            placeholder="品目名"
-                            value={item}
-                            onChange={(e) => setItem(e.target.value)}
+                            type="date"
+                            placeholder="日付"
+                            value={date}
+                            onChange={handleDateChange}
                         />
-                        <Input
+                        <Select
                             w="20%"
-                            type="text"
-                            placeholder="カテゴリ"
-                            value={category}
                             onChange={(e) => setCategory(e.target.value)}
-                        />
+                            value={category}
+                        >
+                            {selectCtgr.map((option) => (
+                                <option key={option.value} value={option.value}>
+                                    {option.label}
+                                </option>
+                            ))}
+                        </Select>
                         <Input
                             w="20%"
                             type="number"
@@ -100,13 +122,14 @@ export default function AddNewSpending() {
                             value={memo}
                             onChange={(e) => setMemo(e.target.value)}
                         />
-                        <Button onClick={() => addSpending}>追加</Button>
+                        <Button onClick={addSpending}>追加</Button>
                     </HStack>
                 </Box>
-
-                {/* 追加リスト */}
+            </Box>
+            {/* 追加リスト */}
+            <Box mx="auto" p="6" w="35%" bgColor="white">
                 <RecentInputList inputItems={inputItems} />
             </Box>
-        </Box>
+        </Flex>
     )
 }
