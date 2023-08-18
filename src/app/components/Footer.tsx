@@ -9,8 +9,8 @@ export default function Footer() {
             position="fixed"
             left="0"
             bottom="0"
-            color="white"
-            bgColor="black"
+            color="#708090"
+            bgColor="#FFF0F5"
             display="flex"
             alignItems="center"
         >
