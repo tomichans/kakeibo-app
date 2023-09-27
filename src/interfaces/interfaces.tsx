@@ -1,8 +1,8 @@
 export interface InputItems {
+    /** 日付 */
+    date: string
     /** カテゴリ */
     category: string
-    /** 品目 */
-    item: string
     /** 金額 */
     amount: number
     /** メモ */

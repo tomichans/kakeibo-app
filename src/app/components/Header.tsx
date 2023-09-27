@@ -10,9 +10,9 @@ export default function Header() {
         <Flex
             align="center"
             justify="space-between"
-            bgColor="black"
+            bgColor="#FFF0F5"
             p={7}
-            color="white"
+            color="#708090"
         >
             <Box
                 as="a"
@@ -22,7 +22,7 @@ export default function Header() {
                 w="80vm"
             >
                 <NextLink href={'/'}>
-                    <Heading as="h1" size="lg">
+                    <Heading as="h1" size="lg" fontWeight="normal">
                         家計簿アプリ（仮）
                     </Heading>
                 </NextLink>
@@ -32,7 +32,6 @@ export default function Header() {
                 display={loginFlg ? 'none' : 'flex'}
                 align="center"
                 fontSize="xl"
-                fontWeight="bold"
             >
                 <NextLink href={'#'}>
                     <ChakraUILink mr={7} onClick={() => setLoginFlg(true)}>
@@ -49,14 +48,13 @@ export default function Header() {
                 display={loginFlg ? 'flex' : 'none'}
                 align="center"
                 fontSize="xl"
-                fontWeight="bold"
             >
                 <NextLink href={'AddNewSpending'}>
-                    <ChakraUILink mr={7}>家計簿を入力</ChakraUILink>
+                    <ChakraUILink mr={7}>記録する</ChakraUILink>
                 </NextLink>
                 <NextLink href={'/'}>
                     <ChakraUILink mr={7} onClick={() => setLoginFlg(false)}>
-                        Logout
+                        Sign out
                     </ChakraUILink>
                 </NextLink>
             </Flex>
