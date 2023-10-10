@@ -1,23 +1,23 @@
-import { ChangeEvent, useState } from 'react'
-import { InputItems } from '../../interfaces/interfaces'
+import { ChangeEvent, useState } from 'react';
+import { InputItems } from '../../interfaces/interfaces';
 
 // 支出入力画面
 export const useAddSpending = () => {
     // カテゴリ・品目名・金額・メモのまとまり
-    const [inputItems, setInputItems] = useState<InputItems[]>([])
+    const [inputItems, setInputItems] = useState<InputItems[]>([]);
 
     // 日付
-    const [date, setDate] = useState<string>('')
+    const [date, setDate] = useState<string>('');
     // カテゴリ
-    const [category, setCategory] = useState<string>('')
+    const [category, setCategory] = useState<string>('');
     // 金額
-    const [amount, setAmount] = useState<number>(0)
+    const [amount, setAmount] = useState<number>(0);
     // メモ
-    const [memo, setMemo] = useState<string>('')
+    const [memo, setMemo] = useState<string>('');
     // 支出追加フラグ
-    const [addSpendFlg, setAddSpendFlg] = useState<boolean>(false)
+    const [addSpendFlg, setAddSpendFlg] = useState<boolean>(false);
     // 追加エラーフラグ
-    const [addErrFlg, setAddErrFlg] = useState<boolean>(false)
+    const [addErrFlg, setAddErrFlg] = useState<boolean>(false);
 
     /**
      * 登録ボタン処理
@@ -26,9 +26,9 @@ export const useAddSpending = () => {
     const addSpending = () => {
         // カテゴリもしくは金額の入力がない場合
         if (!date || !category || !amount) {
-            setAddErrFlg(true)
-            setAddSpendFlg(false)
-            return
+            setAddErrFlg(true);
+            setAddSpendFlg(false);
+            return;
         }
 
         const newInputItems: InputItems = {
@@ -36,20 +36,20 @@ export const useAddSpending = () => {
             category,
             amount,
             memo,
-        }
+        };
 
-        setInputItems([...inputItems, newInputItems])
-        setCategory('')
-        setDate('')
-        setAmount(0)
-        setMemo('')
-        setAddSpendFlg(true)
-        setAddErrFlg(false)
-    }
+        setInputItems([...inputItems, newInputItems]);
+        setCategory('');
+        setDate('');
+        setAmount(0);
+        setMemo('');
+        setAddSpendFlg(true);
+        setAddErrFlg(false);
+    };
 
     const handleDateChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setDate(e.target.value)
-    }
+        setDate(e.target.value);
+    };
 
     return {
         inputItems,
@@ -65,5 +65,5 @@ export const useAddSpending = () => {
         setMemo,
         addSpending,
         handleDateChange,
-    }
-}
+    };
+};

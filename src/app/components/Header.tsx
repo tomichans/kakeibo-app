@@ -1,10 +1,10 @@
-'use client'
-import { useState } from 'react'
-import NextLink from 'next/link'
-import { Box, Flex, Heading, Link as ChakraUILink } from '@chakra-ui/react'
+'use client';
+import { useState } from 'react';
+import NextLink from 'next/link';
+import { Box, Flex, Heading, Link as ChakraUILink } from '@chakra-ui/react';
 
 export default function Header() {
-    const [loginFlg, setLoginFlg] = useState(false)
+    const [loginFlg, setLoginFlg] = useState(false);
 
     return (
         <Flex
@@ -59,5 +59,5 @@ export default function Header() {
                 </NextLink>
             </Flex>
         </Flex>
-    )
+    );
 }

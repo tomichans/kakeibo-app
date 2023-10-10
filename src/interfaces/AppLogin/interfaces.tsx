@@ -1,7 +1,7 @@
 /** ログイン情報 */
 export interface ILoginInfo {
     /** ユーザー名 */
-    username: string
+    username: string;
     /** パスワード */
-    password: string
+    password: string;
 }

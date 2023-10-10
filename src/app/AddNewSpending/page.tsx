@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import {
     Box,
     Button,
@@ -8,9 +8,9 @@ import {
     Input,
     Flex,
     Select,
-} from '@chakra-ui/react'
-import { useAddSpending } from '../hooks/useAddSpending'
-import RecentInputList from '../components/RecentInputList'
+} from '@chakra-ui/react';
+import { useAddSpending } from '../hooks/useAddSpending';
+import RecentInputList from '../components/RecentInputList';
 
 // 支出入力画面
 export default function AddNewSpending() {
@@ -27,7 +27,7 @@ export default function AddNewSpending() {
         setMemo,
         addSpending,
         handleDateChange,
-    } = useAddSpending()
+    } = useAddSpending();
 
     /** カテゴリプルダウンリスト */
     const selectCtgr = [
@@ -35,7 +35,7 @@ export default function AddNewSpending() {
         { value: '食料品', label: '食料品' },
         { value: '消耗品', label: '消耗品' },
         { value: '通信', label: '通信' },
-    ]
+    ];
 
     return (
         <Flex p="6" bg="#F5F5F5" justify="space-between">
@@ -131,5 +131,5 @@ export default function AddNewSpending() {
                 <RecentInputList inputItems={inputItems} />
             </Box>
         </Flex>
-    )
+    );
 }

@@ -1,6 +1,6 @@
-'use client'
-import { FC } from 'react'
-import { Button, ButtonProps } from '@chakra-ui/react'
+'use client';
+import { FC } from 'react';
+import { Button, ButtonProps } from '@chakra-ui/react';
 
 /** 登録ボタン */
 export const CustomLoginButton: FC<ButtonProps> = (props) => {
@@ -19,5 +19,5 @@ export const CustomLoginButton: FC<ButtonProps> = (props) => {
             _hover={{ bg: '#0e528d' }}
             {...props}
         />
-    )
-}
+    );
+};

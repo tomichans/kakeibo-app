@@ -1,6 +1,6 @@
-'use client'
-import { FC } from 'react'
-import { Input, InputProps } from '@chakra-ui/react'
+'use client';
+import { FC } from 'react';
+import { Input, InputProps } from '@chakra-ui/react';
 
 /** テキストボックス */
 export const CustomInput: FC<InputProps> = (props) => {
@@ -14,5 +14,5 @@ export const CustomInput: FC<InputProps> = (props) => {
             _focus={{ outline: '#none' }}
             {...props}
         />
-    )
-}
+    );
+};
