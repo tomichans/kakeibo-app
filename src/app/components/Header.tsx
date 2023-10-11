@@ -33,7 +33,7 @@ export default function Header() {
                 align="center"
                 fontSize="xl"
             >
-                <NextLink href={'#'}>
+                <NextLink href={'/AppLogin'}>
                     <ChakraUILink mr={7} onClick={() => setLoginFlg(true)}>
                         Sign-in
                     </ChakraUILink>
