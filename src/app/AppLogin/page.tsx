@@ -1,11 +1,11 @@
-'use client'
-import { Box, Flex, FormControl } from '@chakra-ui/react'
-import { useAppLogin } from '../hooks/useAppLogin'
-import { CustomLoginButton } from './components/CustomLoginButton'
-import { CustomInput } from './components/CustomInput'
-import { CustomFormLabel } from './components/CustomFormLabel'
-import { CustomErrorMsg } from './components/CustomErrorMsg'
-import { CustomFlexInputArea } from './components/CustomFlexInputArea'
+'use client';
+import { Box, Flex, FormControl } from '@chakra-ui/react';
+import { useAppLogin } from '../hooks/useAppLogin';
+import { CustomLoginButton } from './components/CustomLoginButton';
+import { CustomInput } from './components/CustomInput';
+import { CustomFormLabel } from './components/CustomFormLabel';
+import { CustomErrorMsg } from './components/CustomErrorMsg';
+import { CustomFlexInputArea } from './components/CustomFlexInputArea';
 
 /**
  * ログイン画面
@@ -19,7 +19,7 @@ export default function AppLogin() {
         isInit,
         changeText,
         onClickLogin,
-    } = useAppLogin()
+    } = useAppLogin();
 
     return (
         <Flex align="center" justify="center" h="100vh" w="100%">
@@ -74,7 +74,7 @@ export default function AppLogin() {
                         パスワードを正しく入力してください。
                     </CustomErrorMsg>
 
-                    <CustomLoginButton onClick={(e) => onClickLogin(e)}>
+                    <CustomLoginButton onClick={() => onClickLogin()}>
                         ログイン
                     </CustomLoginButton>
 
@@ -88,5 +88,5 @@ export default function AppLogin() {
                 </Flex>
             </FormControl>
         </Flex>
-    )
+    );
 }
