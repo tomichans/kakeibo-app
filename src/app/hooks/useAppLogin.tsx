@@ -64,8 +64,8 @@ export const useAppLogin = () => {
      * ログイン情報のチェック処理
      */
     const chackLoginInfo = () => {
-        const isExistUserName = checkUsername();
-        const isExistPassword = checkPassword();
+        const isExistUserName: boolean = checkUsername();
+        const isExistPassword: boolean = checkPassword();
         setIsCorrectUsername(isExistUserName);
         setIsCorrectPassword(isExistPassword);
         return isExistUserName && isExistPassword;
