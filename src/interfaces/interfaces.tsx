@@ -1,10 +1,10 @@
 export interface InputItems {
     /** 日付 */
-    date: string
+    date: string;
     /** カテゴリ */
-    category: string
+    category: string;
     /** 金額 */
-    amount: number
+    amount: number;
     /** メモ */
-    memo: string
+    memo: string;
 }

@@ -1,5 +1,5 @@
-'use client'
-import { Box, Text } from '@chakra-ui/react'
+'use client';
+import { Box, Text } from '@chakra-ui/react';
 
 export default function Footer() {
     return (
@@ -16,5 +16,5 @@ export default function Footer() {
         >
             <Text mx="auto">Copyright © 2023 tomichans</Text>
         </Box>
-    )
+    );
 }

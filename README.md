@@ -39,7 +39,7 @@ https://github.com/tomichans/kakeibo-app
 Next.js 最速セットアップ
 https://zenn.dev/a_da_chi/articles/181ea4ccc39580
 
-・VsCode拡張機能
+・VsCode 拡張機能
 Prettier - Code formatter
 
 ## Note（注意事項）
@@ -75,7 +75,6 @@ Prettier - Code formatter
 -   画面設計書
 
 ## References（参考文献）
-
 
 -   NextJs 公式ドキュメント
     https://nextjs.org/docs

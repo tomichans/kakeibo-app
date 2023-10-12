@@ -1,14 +1,14 @@
-'use client'
-import { Box, Heading, ListItem, UnorderedList } from '@chakra-ui/react'
-import { InputItems } from '../../interfaces/interfaces'
+'use client';
+import { Box, Heading, ListItem, UnorderedList } from '@chakra-ui/react';
+import { InputItems } from '../../interfaces/interfaces';
 
 export interface RecentInputListProps {
-    inputItems: InputItems[]
+    inputItems: InputItems[];
 }
 
 // 最近の入力
 export default function RecentInputList(props: RecentInputListProps) {
-    const { inputItems } = props
+    const { inputItems } = props;
 
     return (
         <Box>
@@ -32,5 +32,5 @@ export default function RecentInputList(props: RecentInputListProps) {
                 ))}
             </UnorderedList>
         </Box>
-    )
+    );
 }
