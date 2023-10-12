@@ -48,7 +48,6 @@ export const useAppLogin = () => {
 
     /**
      * ユーザー名のチェック処理
-     * @returns true = チェックOK, false = チェックNG
      */
     const checkUsername = () => {
         return loginInfo.username?.length > 0;
@@ -56,7 +55,6 @@ export const useAppLogin = () => {
 
     /**
      * パスワードのチェック処理
-     * @returns true = チェックOK, false = チェックNG
      */
     const checkPassword = () => {
         return loginInfo.password?.length > 0;
@@ -64,7 +62,6 @@ export const useAppLogin = () => {
 
     /**
      * ログイン情報のチェック処理
-     * @returns true:チェックOK, false:チェックNG
      */
     const chackLoginInfo = () => {
         const isExistUserName = checkUsername();
